@@ -889,24 +889,11 @@ player.CharacterAdded:Connect(function(newChar)
     hrp = newChar:WaitForChild("HumanoidRootPart")
 end)
 
--- Função de callback do botão
-local callback = Instance.new("BindableFunction")
-callback.OnInvoke = function(button)
-    if button == "OK" then
-        if setclipboard then
-            setclipboard("https://www.youtube.com/@Find_Nulla827Oldestview")
-            print("Link copiado com sucesso!")
-        else
-            warn("Executor não suporta setclipboard")
-        end
-    end
-end
-
 -- NOTIFICAÇÃO
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Made By Old Scripts";
-    Text = "Click OK to copy the link to my channel";
-    Icon = "rbxassetid://6379388631"; -- icone de virus so pra dar um pouco de susto kkkk
+    Text = "Script loaded";
+    Icon = "rbxassetid://288817482"; -- icone de virus so pra dar um pouco de susto kkkk
     Duration = 6;
     Button1 = "OK";
     Callback = callback;
